@@ -1,0 +1,6 @@
+protocol = ssh
+user = stephen
+password = 
+host = fidofetch.ca
+path = stackoverflow
+cli_options = -C

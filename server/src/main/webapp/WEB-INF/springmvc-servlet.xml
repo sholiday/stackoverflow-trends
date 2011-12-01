@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean name="/hello_world.html" class="gramcrackr.server.web.ChartDataController"/>
+	<!-- the application context definition for the springapp DispatcherServlet -->
+	<bean name="/hello.htm" class="gramcrackr.server.web.HelloController"/>
+	<bean name="/chartData" class="gramcrackr.server.web.ChartDataController">
+		<property name="chartDataDAO" ref="chartDataDAO"/>
+	</bean>
+	
+	
+	<bean id="chartDataDAO" class="gramcrackr.server.web.ChartDataDAO"/>
+</beans>
